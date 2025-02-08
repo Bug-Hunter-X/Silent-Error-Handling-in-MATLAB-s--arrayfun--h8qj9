@@ -1,0 +1,4 @@
+# Silent Error Handling in MATLAB's `arrayfun`
+This repository demonstrates a subtle bug related to error handling in MATLAB's `arrayfun` function.  `arrayfun` applies a function to each element of an array, but it doesn't inherently halt execution if the applied function encounters an error.  This can lead to unexpected results without explicit error checks.
+
+The `bug.m` file contains a function that throws an error for negative inputs. When this function is used with `arrayfun` on an array containing negative numbers, the errors are silently ignored and the corresponding outputs are not correct. The `bugSolution.m` file demonstrates how to properly handle errors in such a scenario, leading to more robust code.
